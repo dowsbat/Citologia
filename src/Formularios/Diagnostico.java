@@ -8,7 +8,9 @@ package Formularios;
 import Base.Conexion;
 import java.util.Calendar;
 import javax.swing.ButtonGroup;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
+import java.sql.*;
 
 /**
  *
@@ -17,7 +19,7 @@ import javax.swing.UIManager;
 public class Diagnostico extends javax.swing.JFrame {
 
     private final Conexion CBD = new Conexion();
-    private final String sql = "";
+    private String sql = "";
 
     private String TABLA;
 
@@ -131,7 +133,7 @@ public class Diagnostico extends javax.swing.JFrame {
         Cancer.add(rdo_CACE);
         Cancer.add(rdo_ADENO);
         Cancer.add(rdo_AGC);
-
+        llenarGUI();
     }
 
     /**
@@ -201,6 +203,7 @@ public class Diagnostico extends javax.swing.JFrame {
         cmb_CodigoSibasi = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(7, 2147483647));
         setResizable(false);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Antecedentes de Tamizaje"));
@@ -325,7 +328,7 @@ public class Diagnostico extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rdo_ASCUS)
                     .addComponent(rdo_ASC_H))
@@ -340,8 +343,7 @@ public class Diagnostico extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rdo_BG_HPV)
-                    .addComponent(rdo_AG_SI))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(rdo_AG_SI)))
         );
 
         btnGuardar.setText("Guardar");
@@ -525,9 +527,17 @@ public class Diagnostico extends javax.swing.JFrame {
 
         jLabel8.setText("Codigo");
 
-        cmb_Sibasi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Santa Ana", "Metapan", "Chalchuapa", "Ahuachapan", "Sonsonate" }));
+        cmb_Sibasi.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cmb_SibasiItemStateChanged(evt);
+            }
+        });
 
-        cmb_CodigoSibasi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmb_CodigoSibasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmb_CodigoSibasiActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -535,7 +545,7 @@ public class Diagnostico extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -553,7 +563,21 @@ public class Diagnostico extends javax.swing.JFrame {
                                 .addComponent(btn_Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                                .addComponent(jLabel4)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel5)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(20, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -567,28 +591,14 @@ public class Diagnostico extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txt_Expediente, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(cmb_Semana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21)
                         .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(10, 10, 10)
                         .addComponent(cmb_Sibasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cmb_CodigoSibasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel5)
-                        .addGap(19, 19, 19)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(cmb_Semana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(36, 36, 36)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(cmb_CodigoSibasi, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -599,16 +609,13 @@ public class Diagnostico extends javax.swing.JFrame {
                     .addComponent(txt_Edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addComponent(txt_Expediente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmb_Semana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6)
                     .addComponent(txt_Citologico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8)
                     .addComponent(jLabel7)
                     .addComponent(cmb_Sibasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmb_Semana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cmb_CodigoSibasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -624,11 +631,17 @@ public class Diagnostico extends javax.swing.JFrame {
                                     .addComponent(btn_Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn_Informe, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -818,10 +831,30 @@ public class Diagnostico extends javax.swing.JFrame {
     }
 
     private void llenarGUI() {
+        // SELECT `ID_SIBASI`, `SIBASI` FROM `sibasis` WHERE 1
+
+        //SELECT `ID_COD_SIBASI`, `ID_SIBASI`, `CODIGO`, `LUGAR_PROCEDENCIA` FROM `cod_sibasi` WHERE 1
+        try {
+
+            if (CBD.conectar()) {
+                sql = "SELECT `ID_SIBASI`, `SIBASI` FROM `sibasis` ";
+                Statement stmt = null;
+                ResultSet rs = CBD.Seleccionar(sql);
+                
+                while (rs.next()) {
+                    cmb_Sibasi.addItem(String.valueOf(rs.getString("SIBASI")));
+                }
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
 
     }
 
     private void GuardarDatos() {
+        
+        
+        
 //INSERT INTO `motivo_insatisfactorio`(`ID_MOTIVO_INSATISFACTORIO`, `CELULARIDAD_INADECUADA`, `PRESERVACION_INADECUADA`, `MATERIAL_EXTRANO`, `INFLAMACION`, `CITOLISIS`, `AUSENCIA_ZONZ_TRANSFORMACION`, `LAMINA_QUEBRADA`, `FALTA_INFORMACION_CLINICA`, `IDENTIFICACION_INADECUADA`, `SANGRE`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10],[value-11])
 
 //SELECT * FROM `lesion` WHERE (( `LESION` = 0))
@@ -832,8 +865,6 @@ public class Diagnostico extends javax.swing.JFrame {
 
 //SELECT `ID_CAMBIOS`, `CAMBIOS`, `CAMBIOS_OTROS` FROM `cambios` WHERE 1
 
-//INSERT INTO `informe`(`ID_INFORME`, `ID_ANTECENDETES`, `ID_LESION`, `ID_MOTIVO_INSATISFACTORIO`, `ID_CANCER`, `ID_CAMBIOS`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
-    
 // SELECT `ID_SIBASI`, `SIBASI` FROM `sibasis` WHERE 1
 
 //SELECT `ID_COD_SIBASI`, `ID_SIBASI`, `CODIGO`, `LUGAR_PROCEDENCIA` FROM `cod_sibasi` WHERE 1
@@ -844,7 +875,10 @@ public class Diagnostico extends javax.swing.JFrame {
 
 //INSERT INTO `paciente`( `NO_CITOLOGICO`, `EXPEDIENTE`, `EDAD`, `FECHA_TAMIZAJE`) VALUES ([value-1],[value-2],[value-3],[value-4])
 
-//
+//INSERT INTO `resumen`( `ID_TEMPORADA`, `ID_SIBASI`, `ID_ESTADO`, `ID_INFORME`, `ID_USUARIO`, `ID_PACIENTE`, `ID_CALENDARIO`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7])
+   
+//INSERT INTO `informe`(`ID_INFORME`, `ID_ANTECENDETES`, `ID_LESION`, `ID_MOTIVO_INSATISFACTORIO`, `ID_CANCER`, `ID_CAMBIOS`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
+     
     }
 
     private void txt_EdadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_EdadActionPerformed
@@ -872,6 +906,31 @@ public class Diagnostico extends javax.swing.JFrame {
         // TODO add your handling code here:
         LimpiarGUI();
     }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void cmb_SibasiItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmb_SibasiItemStateChanged
+        // TODO add your handling code here:
+        try {
+
+            if (CBD.conectar()) {
+                cmb_CodigoSibasi.removeAllItems();
+                ID_SIBASI = cmb_Sibasi.getSelectedIndex() + 1;
+                sql = "SELECT `ID_COD_SIBASI`, `ID_SIBASI`, `CODIGO`, `LUGAR_PROCEDENCIA` FROM `cod_sibasi` WHERE ID_SIBASI= " + ID_SIBASI + "";
+                Statement stmt = null;
+                ResultSet rs = CBD.Seleccionar(sql);
+                
+                while (rs.next()) {
+                    
+                    cmb_CodigoSibasi.addItem(String.valueOf(rs.getString("CODIGO")+" - " + String.valueOf(rs.getString("LUGAR_PROCEDENCIA"))));
+                }
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_cmb_SibasiItemStateChanged
+
+    private void cmb_CodigoSibasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_CodigoSibasiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmb_CodigoSibasiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -904,6 +963,7 @@ public class Diagnostico extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Diagnostico().setVisible(true);
+                
 
             }
         });
