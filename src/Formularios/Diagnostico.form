@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jPanel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jPanel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                              <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="btn_Informe" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnGuardar" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="btn_Salir" min="-2" pref="71" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="txt_Edad" min="-2" pref="45" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txt_Citologico" min="-2" pref="65" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="txt_Expediente" min="-2" pref="71" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="cmb_Sibasi" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="cmb_CodigoSibasi" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="cmb_Semana" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                              <Component id="jLabel6" min="-2" pref="72" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jPanel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_Edad" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_Expediente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cmb_Semana" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_Citologico" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cmb_Sibasi" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cmb_CodigoSibasi" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="btnGuardar" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                                  <Component id="btn_Salir" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btn_Informe" min="-2" pref="41" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel2">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Antecedentes de Tamizaje"/>
+          </Border>
+        </Property>
+      </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
+      </AccessibilityProperties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="rdo_PrimeraVez" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_Vigente" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_Atrasado" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="10" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="rdo_PrimeraVez" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="rdo_Vigente" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="rdo_Atrasado" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JRadioButton" name="rdo_PrimeraVez">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Primera Vez"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_Vigente">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Vigente"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_Atrasado">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Atrasado"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Edad"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt_Edad">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_EdadActionPerformed"/>
+      </Events>
+    </Component>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Negativa"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="rdo_Satisfactora" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_NoSatistactoria" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="chk_ConCambios" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="28" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="rdo_Satisfactora" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="rdo_NoSatistactoria" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="chk_ConCambios" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JRadioButton" name="rdo_Satisfactora">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="SPE"/>
+          </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="rdo_SatisfactoraStateChanged"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_NoSatistactoria">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="NSPE"/>
+          </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="rdo_NoSatistactoriaStateChanged"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="chk_ConCambios">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="CCAABI"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel3">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Lesion"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="rdo_ASCUS" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_HPV" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_BG" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_BG_HPV" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="rdo_AG_SI" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_CIS" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_AG" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_ASC_H" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="rdo_ASCUS" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_ASC_H" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="rdo_HPV" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_AG" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="rdo_BG" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_CIS" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="rdo_BG_HPV" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_AG_SI" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JRadioButton" name="rdo_ASCUS">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="ASCUS"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_HPV">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="HPV"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_BG">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="BG"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_BG_HPV">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="BG+HPV"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_ASC_H">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="ASC H"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_AG">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="AG"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_CIS">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="CIS"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_AG_SI">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="AG+SI"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="btnGuardar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Guardar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarActionPerformed"/>
+      </Events>
+    </Component>
+    <Container class="javax.swing.JPanel" name="jPanel5">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="MicroOrganismos/Cambios"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="rdo_Cambios_Otros" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="txtCambiosOtros" min="-2" pref="80" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="rdo_CandidaSP" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_Trinchomonas" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_TorulopsisSP" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_Vaginosis" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_Herpex" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="rdo_Trinchomonas" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="rdo_CandidaSP" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="rdo_TorulopsisSP" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="rdo_Vaginosis" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="rdo_Herpex" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="rdo_Cambios_Otros" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtCambiosOtros" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JTextField" name="txtCambiosOtros">
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_Trinchomonas">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Trinchomonas Vaginales"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_CandidaSP">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Micoticos Consistentes con Candida SP"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_TorulopsisSP">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Micoticos Consistentes con Torulopsis SP"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_Vaginosis">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Camb. en la Flora Suges. de Vaginosis Bacteriana"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_Herpex">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Camb. Celulares Asociados a Herpes Simplex"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_Cambios_Otros">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Otros"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No Citologio"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt_Expediente">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JPanel" name="jPanel6">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Cancer"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="rdo_ADENO" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_AGC" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdo_CACE" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="16" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="rdo_CACE" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="rdo_ADENO" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="rdo_AGC" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JRadioButton" name="rdo_ADENO">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="ADENO"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_CACE">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="CACE"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rdo_AGC">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="AGC"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel7">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Motivo Insatisfactorio"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="chk_Celularidad" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="chk_Fijacion" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="chk_Material_Raro" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="chk_Inflamacion" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="chk_Sangre" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="chk_Citolisis" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="chk_Ausencia" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="chk_Lamina" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="chk_Informacion" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="chk_Inadecuada" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="chk_Celularidad" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="chk_Fijacion" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="chk_Material_Raro" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="chk_Inflamacion" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="chk_Sangre" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="chk_Citolisis" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="chk_Ausencia" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="chk_Lamina" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="chk_Informacion" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="chk_Inadecuada" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JCheckBox" name="chk_Celularidad">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Celularidad inadecuada"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="chk_Fijacion">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Fijacion/Preservacion inadecuada"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="chk_Material_Raro">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Material Extrano"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="chk_Inflamacion">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Inflamacion"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="chk_Sangre">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Sangre"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="chk_Inadecuada">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Identificacion inadecuada"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="chk_Informacion">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Falta Informacion Clinica"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="chk_Lamina">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Lamina Quebrada"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="chk_Ausencia">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ausencia zona de transformacion"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="chk_Citolisis">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Citolisi"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JComboBox" name="cmb_Semana">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="5">
+            <StringItem index="0" value="1er Semana"/>
+            <StringItem index="1" value="2da Semana"/>
+            <StringItem index="2" value="3ra Semana"/>
+            <StringItem index="3" value="4ra Semana"/>
+            <StringItem index="4" value="5ta Semana"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="2017"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Mes"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Positiva,Negativa o Insatisfactoria"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn_Informe">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Informe"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Expediente"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt_Citologico">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_CitologicoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn_Salir">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Salir"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Codigo"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cmb_Sibasi">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="5">
+            <StringItem index="0" value="Santa Ana"/>
+            <StringItem index="1" value="Metapan"/>
+            <StringItem index="2" value="Chalchuapa"/>
+            <StringItem index="3" value="Ahuachapan"/>
+            <StringItem index="4" value="Sonsonate"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cmb_CodigoSibasi">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Item 1"/>
+            <StringItem index="1" value="Item 2"/>
+            <StringItem index="2" value="Item 3"/>
+            <StringItem index="3" value="Item 4"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+  </SubComponents>
+</Form>
