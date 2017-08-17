@@ -40,12 +40,13 @@ public class Diagnostico extends javax.swing.JFrame {
     private String ANTECENDENTE;
 
     private int ID_CALENDARIO;
-//    private int ID_DIA;
-//    private int ID_MES;
-//    private int ID_SEMANA;
+    private int DIA;
+    private int MES;
+    private int SEMANA;
 
     private int ID_CAMBIOS;
     private String CAMBIOS;
+    private String CAMBIOS_OTROS;
 
     private int ID_CANCER;
     private String CANCER;
@@ -55,12 +56,6 @@ public class Diagnostico extends javax.swing.JFrame {
 
     private int ID_LESION;
     private String LESION;
-
-    private int ID_DIA;
-    private int DIA;
-    
-    private int ID_MES;
-    private String MES;
 
     private int ID_MOTIVO_INSATISFACTORIO;
     private int CELULARIDAD_INADECUADA;
@@ -82,9 +77,6 @@ public class Diagnostico extends javax.swing.JFrame {
 
     private int ID_PERMISOS;
     private String PERMISO;
-
-    private int ID_SEMANA;
-    private String SEMANA;
 
     private int ID_SIBASI;
     private String SIBASI;
@@ -707,42 +699,43 @@ public class Diagnostico extends javax.swing.JFrame {
     private void obtenerDatosGUI() {
         //Antecedentes
         if (this.rdo_PrimeraVez.isSelected() == true) {
-            ANTECENDENTE = "Primera Vez";
+            ANTECENDENTE = "Primera Vez";//1
         }
         if (this.rdo_Vigente.isSelected() == true) {
-            ANTECENDENTE = "Vigente";
+            ANTECENDENTE = "Vigente";//2
         }
         if (this.rdo_Atrasado.isSelected() == true) {
-            ANTECENDENTE = "Atrasado";
+            ANTECENDENTE = "Atrasado";//3
         }
         //Estado
         if (this.rdo_Satisfactora.isSelected() == true) {
-            ESTADO = "Satisfactoria";
+            ESTADO = "Positiva";//1
+            if (this.chk_ConCambios.isSelected() == true) {
+                ESTADO = "Negativa";//2
+            }
         }
         if (this.rdo_NoSatistactoria.isSelected() == true) {
-            ESTADO = "No Satisfactoria";
+            ESTADO = "No Satisfactoria";//3
         }
-        if (this.chk_ConCambios.isSelected() == true) {
-            ESTADO = "Con Cambios";
-        }
+
         //Cambios
         if (this.rdo_Trinchomonas.isSelected() == true) {
-            CAMBIOS = "Trinchomonas";
+            CAMBIOS = "Trinchomonas";//1
         }
         if (this.rdo_CandidaSP.isSelected() == true) {
-            CAMBIOS = "CandidaSP";
+            CAMBIOS = "CandidaSP";//2
         }
         if (this.rdo_TorulopsisSP.isSelected() == true) {
-            CAMBIOS = "TorulopsisSP";
+            CAMBIOS = "TorulopsisSP";//3
         }
         if (this.rdo_Vaginosis.isSelected() == true) {
-            CAMBIOS = "Vaginosis";
+            CAMBIOS = "Vaginosis";//4
         }
         if (this.rdo_Herpex.isSelected() == true) {
-            CAMBIOS = "Herpex";
+            CAMBIOS = "Herpex";//5
         }
         if (this.rdo_Cambios_Otros.isSelected() == true) {
-            CAMBIOS = txtCambiosOtros.getText();
+            CAMBIOS = txtCambiosOtros.getText();//6
         }
         //Motivo Insatisfactorio
         if (this.chk_Celularidad.isSelected() == true) {
@@ -777,69 +770,81 @@ public class Diagnostico extends javax.swing.JFrame {
         }
         //Lesion
         if (this.rdo_ASCUS.isSelected() == true) {
-            LESION = "ASCUS";
+            LESION = "ASCUS";//1
         }
         if (this.rdo_HPV.isSelected() == true) {
-            LESION = "HPV";
+            LESION = "HPV";//2
         }
         if (this.rdo_BG.isSelected() == true) {
-            LESION = "BG";
+            LESION = "BG";//3
         }
         if (this.rdo_BG_HPV.isSelected() == true) {
-            LESION = "BG+HPV";
+            LESION = "BG+HPV";//4
         }
         if (this.rdo_ASC_H.isSelected() == true) {
-            LESION = "ADC H";
+            LESION = "ADC H";//5
         }
         if (this.rdo_AG.isSelected() == true) {
-            LESION = "AG";
+            LESION = "AG";//6
         }
         if (this.rdo_CIS.isSelected() == true) {
-            LESION = "CIS";
+            LESION = "CIS";//7
         }
         if (this.rdo_AG_SI.isSelected() == true) {
-            LESION = "AG+SI";
+            LESION = "AG+SI";//8
         }
         //Cancer
         if (rdo_CACE.isSelected() == true) {
-            CANCER = "CACE";
+            CANCER = "CACE";//1
         }
         if (rdo_ADENO.isSelected() == true) {
-            CANCER = "ADENO";
+            CANCER = "ADENO";//2
         }
         if (rdo_AGC.isSelected() == true) {
-            CANCER = "AGC";
+            CANCER = "AGC";//3
         }
         //Informacion
         EDAD = Integer.parseInt(txt_Edad.getText());
         NO_CITOLOGICO = Integer.parseInt(txt_Citologico.getText());
         EXPEDIENTE = Integer.parseInt(txt_Expediente.getText());
-        SEMANA = cmb_Semana.getSelectedItem().toString();
+        SEMANA = cmb_Semana.getSelectedIndex();
         Calendar now = Calendar.getInstance();
-        String[] strMonths = new String[]{
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"
-        };
-        MES = strMonths[now.get(Calendar.MONTH)];        
+        MES = now.get(Calendar.MONTH);
         DIA = now.get(Calendar.DAY_OF_MONTH);
         COD_SIBASI = cmb_CodigoSibasi.getSelectedItem().toString();
         SIBASI = cmb_Sibasi.getSelectedItem().toString();
         //COdigo, Mes y Semana
-        
+
     }
 
     private void llenarGUI() {
 
+    }
+
+    private void GuardarDatos() {
+//INSERT INTO `motivo_insatisfactorio`(`ID_MOTIVO_INSATISFACTORIO`, `CELULARIDAD_INADECUADA`, `PRESERVACION_INADECUADA`, `MATERIAL_EXTRANO`, `INFLAMACION`, `CITOLISIS`, `AUSENCIA_ZONZ_TRANSFORMACION`, `LAMINA_QUEBRADA`, `FALTA_INFORMACION_CLINICA`, `IDENTIFICACION_INADECUADA`, `SANGRE`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10],[value-11])
+
+//SELECT * FROM `lesion` WHERE (( `LESION` = 0))
+
+//SELECT `antecedentes`.`ID_ANTECENDETES` FROM  `antecedentes` WHERE (( `ANTECENDENTE` =0))
+
+//SELECT `cancer`.`ID_CANCER`FROM `cancer`WHERE (( `CANCER` =0))
+
+//SELECT `ID_CAMBIOS`, `CAMBIOS`, `CAMBIOS_OTROS` FROM `cambios` WHERE 1
+
+//INSERT INTO `informe`(`ID_INFORME`, `ID_ANTECENDETES`, `ID_LESION`, `ID_MOTIVO_INSATISFACTORIO`, `ID_CANCER`, `ID_CAMBIOS`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
+    
+// SELECT `ID_SIBASI`, `SIBASI` FROM `sibasis` WHERE 1
+
+//SELECT `ID_COD_SIBASI`, `ID_SIBASI`, `CODIGO`, `LUGAR_PROCEDENCIA` FROM `cod_sibasi` WHERE 1
+
+//SELECT `ID_ESTADO`, `ESTADO` FROM `estado` WHERE 1
+
+//SELECT `ID_TEMPORADA`, `TEMPORADA` FROM `temporada` WHERE 1
+
+//INSERT INTO `paciente`( `NO_CITOLOGICO`, `EXPEDIENTE`, `EDAD`, `FECHA_TAMIZAJE`) VALUES ([value-1],[value-2],[value-3],[value-4])
+
+//
     }
 
     private void txt_EdadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_EdadActionPerformed
