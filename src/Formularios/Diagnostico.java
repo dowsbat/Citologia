@@ -851,10 +851,15 @@ public class Diagnostico extends javax.swing.JFrame {
 
     }
 
-    private void GuardarDatos() {
+    private void GuardarDatos(String sql) {
         
+ //PreparedStatement statement = connection.prepareStatement(insert,Statement.RETURN_GENERATED_KEYS);       
+ 
+ //ResultSet generatedKeys = statement.getGeneratedKeys();
+//if (generatedKeys.next()) {
+  //       idGenerado = generatedKeys.getInt(1);
         
-        
+  
 //INSERT INTO `motivo_insatisfactorio`(`ID_MOTIVO_INSATISFACTORIO`, `CELULARIDAD_INADECUADA`, `PRESERVACION_INADECUADA`, `MATERIAL_EXTRANO`, `INFLAMACION`, `CITOLISIS`, `AUSENCIA_ZONZ_TRANSFORMACION`, `LAMINA_QUEBRADA`, `FALTA_INFORMACION_CLINICA`, `IDENTIFICACION_INADECUADA`, `SANGRE`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10],[value-11])
 
 //SELECT * FROM `lesion` WHERE (( `LESION` = 0))
@@ -905,6 +910,8 @@ public class Diagnostico extends javax.swing.JFrame {
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
         LimpiarGUI();
+        obtenerDatosGUI();
+        GuardarDatos("");
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void cmb_SibasiItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmb_SibasiItemStateChanged
