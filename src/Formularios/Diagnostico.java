@@ -84,7 +84,7 @@ public class Diagnostico extends javax.swing.JFrame {
     private String SIBASI;
 
     private int ID_COD_SIBASI;
-    private String COD_SIBASI;
+    private String[] COD_SIBASI = new String[24];
     private String LUGAR_PROCEDENCIA;
 
     private int ID_TEMPORADA;
@@ -545,7 +545,7 @@ public class Diagnostico extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -562,22 +562,7 @@ public class Diagnostico extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btn_Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                                .addComponent(jLabel4)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel5)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(20, Short.MAX_VALUE))))
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -597,8 +582,18 @@ public class Diagnostico extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(cmb_Sibasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cmb_CodigoSibasi, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(cmb_CodigoSibasi, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel5)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -614,7 +609,10 @@ public class Diagnostico extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(cmb_Sibasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cmb_Semana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmb_CodigoSibasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmb_CodigoSibasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -633,15 +631,9 @@ public class Diagnostico extends javax.swing.JFrame {
                         .addComponent(btn_Informe, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(1, 1, 1)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6))))
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -706,7 +698,24 @@ public class Diagnostico extends javax.swing.JFrame {
     }
 
     private void LimpiarVariables() {
-
+        ANTECENDENTE = "";
+        ESTADO = "";
+        CAMBIOS = "";
+        LESION = "";
+        CANCER = "";
+        EDAD = 0;
+        NO_CITOLOGICO = 0;
+        EXPEDIENTE = 0;
+        CELULARIDAD_INADECUADA = 0;
+        PRESERVACION_INADECUADA = 0;
+        MATERIAL_EXTRANO = 0;
+        INFLAMACION = 0;
+        SANGRE = 0;
+        CITOLISIS = 0;
+        AUSENCIA_ZONZ_TRANSFORMACION = 0;
+        LAMINA_QUEBRADA = 0;
+        FALTA_INFORMACION_CLINICA = 0;
+        IDENTIFICACION_INADECUADA = 0;
     }
 
     private void obtenerDatosGUI() {
@@ -824,7 +833,7 @@ public class Diagnostico extends javax.swing.JFrame {
         Calendar now = Calendar.getInstance();
         MES = now.get(Calendar.MONTH);
         DIA = now.get(Calendar.DAY_OF_MONTH);
-        COD_SIBASI = cmb_CodigoSibasi.getSelectedItem().toString();
+        //COD_SIBASI = cmb_CodigoSibasi.getSelectedItem().toString();
         SIBASI = cmb_Sibasi.getSelectedItem().toString();
         //COdigo, Mes y Semana
 
@@ -840,8 +849,9 @@ public class Diagnostico extends javax.swing.JFrame {
                 sql = "SELECT `ID_SIBASI`, `SIBASI` FROM `sibasis` ";
                 Statement stmt = null;
                 ResultSet rs = CBD.Seleccionar(sql);
-                
+
                 while (rs.next()) {
+
                     cmb_Sibasi.addItem(String.valueOf(rs.getString("SIBASI")));
                 }
             }
@@ -852,38 +862,35 @@ public class Diagnostico extends javax.swing.JFrame {
     }
 
     private void GuardarDatos(String sql) {
+
+        //PreparedStatement statement = connection.prepareStatement(insert,Statement.RETURN_GENERATED_KE7
+        // SELECT `ID_SIBASI`, `SIBASI` FROM `sibasis` WHERE 1
+        //SELECT `ID_COD_SIBASI`, `ID_SIBASI`, `CODIGO`, `LUGAR_PROCEDENCIA` FROM `cod_sibasi` WHERE 1
+        //SELECT `ID_ESTADO`, `ESTADO` FROM `estado` WHERE 1
+        //SELECT `ID_TEMPORADA`, `TEMPORADA` FROM `temporada` WHERE 1
+        //INSERT INTO `paciente`( `NO_CITOLOGICO`, `EXPEDIENTE`, `EDAD`, `FECHA_TAMIZAJE`) VALUES ([value-1],[value-2],[value-3],[value-4])
+        //INSERT INTO `resumen`( `ID_TEMPORADA`, `ID_SIBASI`, `ID_ESTADO`, `ID_INFORME`, `ID_USUARIO`, `ID_PACIENTE`, `ID_CALENDARIO`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7])
+        //INSERT INTO `informe`(`ID_INFORME`, `ID_ANTECENDETES`, `ID_LESION`, `ID_MOTIVO_INSATISFACTORIO`, `ID_CANCER`, `ID_CAMBIOS`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
+    sql = "INSERT INTO `motivo_insatisfactorio`(`CELULARIDAD_INADECUADA`, `PRESERVACION_INADECUADA`, `MATERIAL_EXTRANO`, `INFLAMACION`, `CITOLISIS`, `AUSENCIA_ZONZ_TRANSFORMACION`, `LAMINA_QUEBRADA`, `FALTA_INFORMACION_CLINICA`, `IDENTIFICACION_INADECUADA`, `SANGRE`) VALUES ('','','','','','','','','','')";
+    sql = "SELECT `LESION` FROM `lesion` WHERE LESION = ''";
+    sql = "SELECT `CANCER` FROM `lesion` WHERE CANCER = ''";
+    sql = "SELECT `ANTECENDENTE` FROM `antecedentes` WHERE `ANTECENDENTE` = ''";
+    sql = "SELECT  `CAMBIOS` FROM `cambios` WHERE`CAMBIOS` = ''";
+    sql = "INSERT INTO `informe`(`ID_ANTECENDETES`, `ID_LESION`, `ID_MOTIVO_INSATISFACTORIO`, `ID_CANCER`, `ID_CAMBIOS`) VALUES ('','','','','','')";
+    
+    sql = "SELECT `ESTADO` FROM `estado` WHERE `ESTADO` = ''";
+    sql = "SELECT `ID_TEMPORADA`, `TEMPORADA` FROM `temporada` WHERE `TEMPORADA` = '' ";
+    sql = "SELECT `ID_SIBASI` FROM `cod_sibasi` WHERE `CODIGO` = ''";
+    
+    sql="SELECT `ID_MES` FROM `mes` WHERE `MES`= ''";
+    sql = "SELECT `ID_SEMANA` FROM `semana` WHERE `SEMANA` = ''";
+    sql = "INSERT INTO `calendario`(`ID_DIA`, `ID_MES`, `ID_SEMANA`) VALUES ('','','')";
+    
+    sql = "INSERT INTO `paciente`(`NO_CITOLOGICO`, `EXPEDIENTE`, `EDAD`, `FECHA_TAMIZAJE`) VALUES ('','','','')";
+    
         
- //PreparedStatement statement = connection.prepareStatement(insert,Statement.RETURN_GENERATED_KEYS);       
- 
- //ResultSet generatedKeys = statement.getGeneratedKeys();
-//if (generatedKeys.next()) {
-  //       idGenerado = generatedKeys.getInt(1);
-        
-  
-//INSERT INTO `motivo_insatisfactorio`(`ID_MOTIVO_INSATISFACTORIO`, `CELULARIDAD_INADECUADA`, `PRESERVACION_INADECUADA`, `MATERIAL_EXTRANO`, `INFLAMACION`, `CITOLISIS`, `AUSENCIA_ZONZ_TRANSFORMACION`, `LAMINA_QUEBRADA`, `FALTA_INFORMACION_CLINICA`, `IDENTIFICACION_INADECUADA`, `SANGRE`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10],[value-11])
-
-//SELECT * FROM `lesion` WHERE (( `LESION` = 0))
-
-//SELECT `antecedentes`.`ID_ANTECENDETES` FROM  `antecedentes` WHERE (( `ANTECENDENTE` =0))
-
-//SELECT `cancer`.`ID_CANCER`FROM `cancer`WHERE (( `CANCER` =0))
-
-//SELECT `ID_CAMBIOS`, `CAMBIOS`, `CAMBIOS_OTROS` FROM `cambios` WHERE 1
-
-// SELECT `ID_SIBASI`, `SIBASI` FROM `sibasis` WHERE 1
-
-//SELECT `ID_COD_SIBASI`, `ID_SIBASI`, `CODIGO`, `LUGAR_PROCEDENCIA` FROM `cod_sibasi` WHERE 1
-
-//SELECT `ID_ESTADO`, `ESTADO` FROM `estado` WHERE 1
-
-//SELECT `ID_TEMPORADA`, `TEMPORADA` FROM `temporada` WHERE 1
-
-//INSERT INTO `paciente`( `NO_CITOLOGICO`, `EXPEDIENTE`, `EDAD`, `FECHA_TAMIZAJE`) VALUES ([value-1],[value-2],[value-3],[value-4])
-
-//INSERT INTO `resumen`( `ID_TEMPORADA`, `ID_SIBASI`, `ID_ESTADO`, `ID_INFORME`, `ID_USUARIO`, `ID_PACIENTE`, `ID_CALENDARIO`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7])
-   
-//INSERT INTO `informe`(`ID_INFORME`, `ID_ANTECENDETES`, `ID_LESION`, `ID_MOTIVO_INSATISFACTORIO`, `ID_CANCER`, `ID_CAMBIOS`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
-     
+    
+    
     }
 
     private void txt_EdadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_EdadActionPerformed
@@ -924,10 +931,12 @@ public class Diagnostico extends javax.swing.JFrame {
                 sql = "SELECT `ID_COD_SIBASI`, `ID_SIBASI`, `CODIGO`, `LUGAR_PROCEDENCIA` FROM `cod_sibasi` WHERE ID_SIBASI= " + ID_SIBASI + "";
                 Statement stmt = null;
                 ResultSet rs = CBD.Seleccionar(sql);
-                
+                int i = 0;
                 while (rs.next()) {
-                    
-                    cmb_CodigoSibasi.addItem(String.valueOf(rs.getString("CODIGO")+" - " + String.valueOf(rs.getString("LUGAR_PROCEDENCIA"))));
+                    //COD_SIBASI[i] = rs.getString("ID_COD_SIBASI");
+                    //cmb_CodigoSibasi.addItem(String.valueOf(rs.getString("CODIGO")+" - " + String.valueOf(rs.getString("LUGAR_PROCEDENCIA"))));
+                    // i+=1;
+                    cmb_CodigoSibasi.addItem(String.valueOf(rs.getString("CODIGO")));
                 }
             }
         } catch (Exception ex) {
@@ -970,7 +979,6 @@ public class Diagnostico extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Diagnostico().setVisible(true);
-                
 
             }
         });

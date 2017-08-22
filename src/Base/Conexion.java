@@ -15,18 +15,15 @@ import java.sql.Statement;
  * @author Oscar Rivera
  */
 public class Conexion {
-    
     private Connection conexion;
     private Statement sentencia;
-    
     //Datos para la conexion con la DB
     private final String servidor = "localhost";
     private final String puerto =  "3306";
-    private final String DB = "Citologia";
+    private final String DB = "citologiap";
     private final String usuario = "root";
     private final String clave = "";
     private final String URL = "jdbc:mysql://"+ servidor +":"+puerto+"/"+DB;
-
 /**    
  *Metodo Constructor, que inicializa los atributos
  *internos del conector de DB
